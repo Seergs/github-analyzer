@@ -24,10 +24,14 @@ export const Input = styled.input`
   font-size: 1.1em !important;
   font-family: "Lato", sans-serif;
   font-size: 0.9em;
-  box-shadow: 0 2px 2px hsla(0, 0%, 0%, 0.1);
+  box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.2);
 
   &::placeholder {
     color: #a0aec0;
+  }
+
+  &:focus {
+    box-shadow: inset 0 4px 6px hsla(0, 0%, 0%, 0.2);
   }
 `;
 
@@ -36,7 +40,7 @@ export const ChevronRightSvg = styled(ChevronRight)`
 `;
 
 export const Button = styled.button`
-  background-color: #e6fffa;
+  background-color: #b2f5ea;
   width: 150px;
   color: #234e52;
   font-weight: bold;
@@ -48,9 +52,13 @@ export const Button = styled.button`
   justify-content: center;
   font-family: "Lato", sans-serif;
   cursor: pointer;
-  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 4px 6px hsla(0, 0%, 80%, 0.2);
+  transition: background 0.1s ease-in;
 
   &:active {
     box-shadow: none;
+  }
+  &:hover {
+    background: #81e6d9;
   }
 `;

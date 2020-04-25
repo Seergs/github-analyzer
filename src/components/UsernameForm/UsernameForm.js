@@ -13,10 +13,11 @@ export default function UsernameForm({ onSubmit, loading }) {
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        autoFocus
       />
       <Button type="submit">
         {loading ? (
-          <ClipLoader color="#2C7A7B" size={14} />
+          <ClipLoader color="#285E61" size={14} />
         ) : (
           <>
             <span>Analyze</span>

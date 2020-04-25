@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import UsernameForm from "./components/UsernameForm/UsernameForm";
 import Result from "./components/Result/Result";
 
@@ -20,7 +20,7 @@ function App() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
         setLoading(false);
       });
   };

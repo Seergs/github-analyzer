@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import UsernameForm from "./components/UsernameForm/UsernameForm";
 import Result from "./components/Result/Result";
+import cogoToast from "cogo-toast";
 
 import { AppWrapper, Title, Wrapper } from "./styles";
+import GlobalStyles from "./globalStyles";
 
 import axios from "axios";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,18 +23,23 @@ function App() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err.response);
+        cogoToast.error("Oops, something went wrong, try again later", {
+          position: "top-right",
+          hideAfter: 3,
+        });
         setLoading(false);
       });
   };
 
   return (
     <AppWrapper>
+      <GlobalStyles />
       <Title>Github User Analyzer</Title>
       <Wrapper>
         <UsernameForm onSubmit={handleFormSubmit} loading={loading} />
         <Result data={user} />
       </Wrapper>
+      <Footer />
     </AppWrapper>
   );
 }

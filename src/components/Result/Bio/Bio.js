@@ -15,7 +15,12 @@ export default function Bio({ bio }) {
           <QuoteRightIcon />
         </p>
       ) : (
-        <span>No bio available</span>
+        <small>
+          No bio available{" "}
+          <span role="img" aria-label="emoji">
+            😞
+          </span>
+        </small>
       )}
     </StyledBio>
   );
@@ -38,8 +43,10 @@ const StyledBio = styled.div`
     letter-spacing: 1px;
     font-size: 1em;
   }
-  span {
-    font-style: italic;
+  small {
+    color: #4fd1c5;
+    text-align: center;
+    display: block;
   }
 `;
 

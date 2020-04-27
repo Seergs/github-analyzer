@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
 body,
 html,
 #root {
@@ -19,3 +22,15 @@ button:focus,
 input:focus {
   outline: none;
 }
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+`;

@@ -20,6 +20,11 @@ export const StyledAvatar = styled.a`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  @media screen and (min-width: 600px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const AvatarImage = styled.img`

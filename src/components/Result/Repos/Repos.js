@@ -50,6 +50,16 @@ const StyledRepos = styled.a`
   &:hover {
     width: 73%;
   }
+
+  @media screen and (min-width: 900px) {
+    margin: 0;
+    margin-right: 1em;
+    width: 25%;
+
+    &:hover {
+      width: 26%;
+    }
+  }
 `;
 
 const Container = styled.div`

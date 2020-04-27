@@ -12,6 +12,12 @@ export const Form = styled.form`
   border-top-right-radius: 30px;
   position: relative;
   top: -25px;
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -32,6 +38,11 @@ export const Input = styled.input`
 
   &:focus {
     box-shadow: inset 0 4px 6px hsla(0, 0%, 0%, 0.2);
+  }
+
+  @media screen and (min-width: 900px) {
+    margin-bottom: 0;
+    margin-right: 2em;
   }
 `;
 
